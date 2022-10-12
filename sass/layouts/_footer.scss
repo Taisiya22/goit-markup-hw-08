@@ -1,0 +1,131 @@
+.footer {
+    padding: 60px 0px;
+    background-color: var(--footer-hero-background-color);
+
+    &__box {
+            display: flex;
+            align-items: baseline;
+        }
+    
+        &__logo {
+            margin-bottom: 20px;
+            color: var(--white-text-color);
+            padding: 0;
+        }
+    
+        &__logo:hover,
+        &__logo:focus {
+            color: var(--accent-color);
+        }
+}
+
+
+
+.address {
+    margin-top: 20px;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 9px;}
+        }
+    
+        &__link {
+            font-style: normal;
+            color: var(--white-text-color);
+            line-height: 1.71;
+            text-decoration: none;
+            transition: var(--timing-cubic-bezier);
+        }
+    
+        &__link:hover,
+        &__link:focus {
+            color: var(--accent-color);
+        }
+
+                .contact {
+        
+                    &__link {
+                        font-style: normal;
+                        color: var(--footer-text-color-tel-mail);
+                        line-height: 1.71;
+                        text-decoration: none;
+                        transition: var(--timing-cubic-bezier);
+        
+                    }
+        
+                    &__link:hover,
+                    &__link:focus {
+                        color: var(--accent-color);
+                    }
+                }
+}
+
+
+
+.footer-social {
+    margin-left: 70px;
+
+    &__list {
+            margin-top: 20px;
+        }
+    
+        &__link {
+            background-color: rgba(255, 255, 255, 0.1);
+            fill: var(--white-text-color);
+        }
+    
+        &__link:hover,
+        &__link:focus {
+            background-color: var(--accent-color);
+        }
+}
+
+
+
+.sign-form {
+    margin-left: auto;
+    &__field {
+            display: flex;
+            margin-top: 20px;
+        }
+    
+        &__input {
+            padding-left: 15px;
+            margin-right: 12px;
+            min-width: 358px;
+            height: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            background-color: var(--footer-hero-background-color);
+            color: var(--white-text-color);
+        }
+    
+        &__input::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    
+        &__button {
+            min-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+                    background-color: var(--hover-hero-button);
+                }
+        }
+    
+
+   &__icon {
+       margin-left: 10px;
+   }
+        
+}
+
+

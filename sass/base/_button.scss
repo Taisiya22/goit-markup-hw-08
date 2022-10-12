@@ -1,0 +1,24 @@
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--white-text-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: var(--timing-cubic-bezier);
+    &:hover,
+    &:focus {
+            background-color: var(--hover-hero-button);
+        }
+    
+        &:active {
+            background-color: var(--hover-hero-button);
+        }
+}
+
