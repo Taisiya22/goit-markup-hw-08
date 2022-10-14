@@ -1,7 +1,10 @@
 .services {
-    padding-top: 0;
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+            display: none;
+        }
+    // padding-top: 0;
     &__list {
-            display: flex;
+            // display: flex;
         }
     
         &__item {
@@ -11,7 +14,7 @@
     
         &__item {
             &:not(:last-child) {
-                margin-right: 30px;
+                // margin-right: 30px;
             }}
     
         &__overlay {

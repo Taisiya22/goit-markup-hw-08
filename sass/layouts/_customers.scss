@@ -1,12 +1,19 @@
 .clients {
 &__list {
+        // display: flex;
+        // justify-content: center;
+        // gap: 30px;
+
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
     }
 
     &__item {
-        width: 170px;
+        // width: 170px;
+        // height: 92px;
+
+        width: 210px;
         height: 92px;
     }
 
