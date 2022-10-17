@@ -21,7 +21,15 @@
     <header class="header">
       <div class="container nav">
         <nav class="nav">
+          <div class="menu">
           <a href="index.html" class="logo animate__animated animate__heartBeat"> <span class="logo__prepend">Web</span>Studio</a>
+          <button type="button" class="menu-button is-open" data-menu-button>
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          </div>
           <ul class="nav-site list">
             <li class="nav-site__item"><a href="./index.html" class="nav-site__link nav-site__link--current">Студія</a></li>
             <li class="nav-site__item"><a href="./portfolio.html" class="nav-site__link">Портфоліо</a></li>
@@ -51,7 +59,7 @@
     <main>
       <!--секція герой-->
       <section class="hero hero__overlay">
-        <div class="container">
+        <div class="hero__container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button hero__button" data-modal-open>Замовити послугу</button>
         </div>
@@ -117,7 +125,7 @@
             <li class="services__item">
               <img
                 class="image"
-                src="./images/img1.jpg"
+                src="./images/desktop/img1.jpg"
                 alt="працює за комп'ютером"
                 width="370"
                 height="294"
@@ -127,7 +135,7 @@
             <li class="services__item">
               <img
               class="image"
-                src="./images/img2.jpg"
+                src="./images/desktop/img2.jpg"
                 alt="комп'ютер і телефон"
                 width="370"
                 height="294"
@@ -139,7 +147,7 @@
             <li class="services__item">
               <img 
               class="image"
-                src="./images/img3.jpg"
+                src="./images/desktop/img3.jpg"
                 alt="працює за планшетом"
                 width="370"
                 height="294"
@@ -159,7 +167,7 @@
             <li class="team__item">
               <img
                 class="image"
-                src="./images/photo1.jpg"
+                src="./images/desktop/photo1.jpg"
                 alt="Ігор Дем'яненко"
                 width="270"
               />
@@ -199,7 +207,7 @@
             <li class="team__item">
               <img
                 class="image"
-                src="./images/photo2.jpg"
+                src="./images/desktop/photo2.jpg"
                 alt="Ольга Рєпіна"
                 width="270"
               />
@@ -239,7 +247,7 @@
             <li class="team__item">
               <img
                 class="image"
-                src="./images/photo3.jpg"
+                src="./images/desktop/photo3.jpg"
                 alt="Микола Тарасов"
                 width="270"
               />
@@ -279,7 +287,7 @@
             <li class="team__item">
               <img
                 class="image"
-                src="./images/photo4.jpg"
+                src="./images/desktop/photo4.jpg"
                 alt="Михайло Єрмаков"
                 width="270" 
               />
@@ -363,7 +371,7 @@
     <!--футер-->
     <footer class="footer">
       <div class="container footer__box">
-        <div class="footer__wrap">
+      <div class="footer__wrap">
         <div>
           <a href="" class="logo footer__logo"><span class="logo__prepend">Web</span>Studio</a>
           <address class="address">
@@ -380,6 +388,7 @@
             </ul>
           </address>
         </div>
+       
         <div class="footer-social">
           <span class="list__title">Приєднуйтесь</span>
           <ul class="social footer-social__list list">
@@ -412,7 +421,7 @@
             </li>
           </ul>
         </div>
-        </div>
+      </div>
         <form class="sign-form">
           <span class="list__title">підпишіться на розсилку</span>
           <div class="sign-form__field">
@@ -428,6 +437,8 @@
           </div>
         </form>
       </div>
+     </div>
+     
     </footer>
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
@@ -484,6 +495,7 @@
         </button>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

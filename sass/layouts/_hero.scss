@@ -1,36 +1,56 @@
 .hero {
-    // padding: 200px 0;
+    padding: 118px 0;
     text-align: center;
 
-    &__overlay {
-            max-width: 1600px;
-            height: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
-                url(../images/hero.jpg);
-            background-position: center;
-            background-color: var(--overlay-background-color);
-        }
+   
     
-        &__title {
-            // max-width: 696px;
-            // margin-bottom: 30px;
-            margin-left: auto;
-            margin-right: auto;
-    
-            color: var(--white-text-color);
-            font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
-            text-align: center;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-    
-        &__button {
-            // padding: 10px 32px;
-            // min-width: 216px;
-        }
-}
+    background-color: var(--overlay-background-color);
+   
 
+    &__overlay {
+        max-width: 1600px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
+            url(../images/header-mob-1x.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 768px) {
+            background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
+                    url(../images/header-tab-1x.jpg);
+        }
+                 @media screen and (min-width: 1200px) {
+                    background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
+                            url(../images/hero.jpg);
+                 }
+    }
+
+    &__title {
+        width: 360px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        color: var(--white-text-color);
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 1200px) {
+          font-size: 44px;  
+          line-height: 1.36;
+          width: 696px;
+        }
+    }
+
+    &__button {
+        padding: 10px 32px;
+        min-width: 216px;
+    }
+}
