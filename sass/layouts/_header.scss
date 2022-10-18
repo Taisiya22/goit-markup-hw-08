@@ -1,28 +1,9 @@
 .header { 
     border-bottom: 1px solid var(--border-bottom-header);
+    position: relative;
 }
 
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    padding: 10px 0;
- 
-    
-}
 
-.menu-button .icon-cross {
-    display: none;
-}
-
-.menu-button.is-open .icon-cross {
-    display: block;
-}
-.menu-button.is-open .icon-menu {
-    display: none;
-}
 // .nav {
 //     // display: flex;
 //     // align-items: center;

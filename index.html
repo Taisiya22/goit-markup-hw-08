@@ -23,13 +23,18 @@
         <nav class="nav">
           <div class="menu">
           <a href="index.html" class="logo animate__animated animate__heartBeat"> <span class="logo__prepend">Web</span>Studio</a>
-          <button type="button" class="menu-button is-open" data-menu-button>
-            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
-              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          <button type="button" class="menu-toggle js-open-menu" 
+           aria-expanded="false"
+            aria-label="Перемикач мобільного меню"
+            aria-controls="mobile-menu">
+            
+            <svg class="menu-toggle__icon" width="40" height="40" 
+           >
+              <use href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
           </div>
+        </div>
           <ul class="nav-site list">
             <li class="nav-site__item"><a href="./index.html" class="nav-site__link nav-site__link--current">Студія</a></li>
             <li class="nav-site__item"><a href="./portfolio.html" class="nav-site__link">Портфоліо</a></li>
@@ -125,20 +130,22 @@
             <li class="services__item">
               <img
                 class="image"
-                src="./images/desktop/img1.jpg"
+                srcset="./images/desktop/img1.jpg 1x, 
+                        ./images/desktop/img1-2x.jpg 2x"
                 alt="працює за комп'ютером"
                 width="370"
-                height="294"
+                
               />
               <div class="services__overlay"><p class="list__title">Декстопні додатки</p></div>
             </li>
             <li class="services__item">
               <img
               class="image"
-                src="./images/desktop/img2.jpg"
+                srcset="./images/desktop/img2.jpg 1x,
+                ./images/desktop/img2-2x.jpg 2x"
                 alt="комп'ютер і телефон"
                 width="370"
-                height="294"
+              
               />
               <div class="services__overlay">
                 <p class="list__title">мобільні додатки</p>
@@ -147,7 +154,8 @@
             <li class="services__item">
               <img 
               class="image"
-                src="./images/desktop/img3.jpg"
+                srcset="./images/desktop/img3.jpg 1x,
+                ./images/desktop/img3-2x.jpg 2x"
                 alt="працює за планшетом"
                 width="370"
                 height="294"
@@ -167,9 +175,16 @@
             <li class="team__item">
               <img
                 class="image"
+                srcset="
+                ./images/desktop/photo1.jpg 270w,
+                ./images/tablet/photo1-tab.jpg 354w,
+                ./images/mobile/photo1-mob.jpg 450w,
+                ./images/desktop/photo1-2x.jpg 540w,
+                ./images/tablet/photo1-tab-2x.jpg 708w,
+                ./images/mobile/photo1-mob-2x.jpg 900w"
                 src="./images/desktop/photo1.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
               />
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p class="team__description">Product Designer</p>
@@ -207,9 +222,16 @@
             <li class="team__item">
               <img
                 class="image"
+                srcset="
+                ./images/desktop/photo2.jpg 270w,
+                ./images/tablet/photo2-tab.jpg 354w,
+                ./images/mobile/photo2-mob.jpg 450w,
+                ./images/desktop/photo2-2x.jpg 540w,
+                ./images/tablet/photo2-tab-2x.jpg 708w,
+                ./images/mobile/photo2-mob-2x.jpg 900w"
                 src="./images/desktop/photo2.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
               />
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p class="team__description">Frontend Developer</p>
@@ -247,9 +269,16 @@
             <li class="team__item">
               <img
                 class="image"
+                srcset="
+                ./images/desktop/photo3.jpg 270w,
+                ./images/tablet/photo3-tab.jpg 354w,
+                ./images/mobile/photo3-mob.jpg 450w,
+                ./images/desktop/photo3-2x.jpg 540w,
+                ./images/tablet/photo3-tab-2x.jpg 708w,
+                ./images/mobile/photo3-mob-2x.jpg 900w"
                 src="./images/desktop/photo3.jpg"
                 alt="Микола Тарасов"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
               />
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__description">Marketing</p>
@@ -287,9 +316,16 @@
             <li class="team__item">
               <img
                 class="image"
+                srcset="
+                ./images/desktop/photo4.jpg 270w,
+                ./images/tablet/photo4-tab.jpg 354w,
+                ./images/mobile/photo4-mob.jpg 450w,
+                ./images/desktop/photo4-2x.jpg 540w,
+                ./images/tablet/photo4-tab-2x.jpg 708w,
+                ./images/mobile/photo4-mob-2x.jpg 900w"
                 src="./images/desktop/photo4.jpg"
                 alt="Михайло Єрмаков"
-                width="270" 
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
               />
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p class="team__description">UI Designer</p>
@@ -495,7 +531,51 @@
         </button>
       </div>
     </div>
-    <script src="./js/menu.js"></script>
+    <!-- mobile-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" aria-label="Перемикач мобільного меню">
+          <use class="menu-toggle__close" href="./images/icons.svg#mob-close"></use>
+        </svg>
+      </button>
+      <div class="menu-container__wrap">
+        <ul class="mob-menu">
+          <li class="mob-menu__item">
+            <a href="./index.html" class="mob-menu__link mob-menu__link--current">Студія</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="./portfolio.html" class="mob-menu__link">Портфоліо</a>
+          </li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">Контакти</a></li>
+        </ul>
+        <ul class="mob-contact">
+          <li class="mob-contact__item">
+            <a href="mailto:info@devstudio.com" class="mob-contact__link">info@devstudio.com</a>
+          </li>
+          <li class="mob-contact__item">
+            <a href="tel:+380961111111" class="mob-contact__link">+38 096 111 11 11</a>
+          </li>
+        </ul>
+        <ul class="mob-socials">
+          <li class="mob-socials__item">
+            <a href="#" class="mob-socials__link">instagram</a>
+          </li>
+          <li class="mob-socials__item">
+            <a href="#" class="mob-socials__link">twitter</a>
+          </li>
+          <li class="mob-socials__item">
+            <a href="#" class="mob-socials__link">facebook</a>
+          </li>
+          <li class="__item">
+            <a href="#" class="mob-socials__link">linkedln</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
