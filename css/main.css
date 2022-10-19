@@ -155,8 +155,8 @@ body {
   color: var(--black-text-color);
   font-family: var(--logo-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   text-decoration: none;
   -webkit-transition: var(--timing-cubic-bezier);
   transition: var(--timing-cubic-bezier);
@@ -169,6 +169,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .logo {
+    font-size: 26px;
+    line-height: 1.19;
     margin-right: 93px;
   }
 }
@@ -187,7 +189,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  padding: 16px 0 24px 0;
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    padding-bottom: 30px;
+  }
 }
 .social__item {
   width: 44px;
@@ -274,15 +282,6 @@ body {
   border-radius: 2px;
 }
 
-.nav-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-}
 @media screen and (max-width: 767px) {
   .nav-contact {
     display: none;
@@ -301,9 +300,9 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .nav-contact {
-    margin-left: 312px;
-    -ms-flex-wrap: nowrap wrap;
-        flex-wrap: nowrap wrap;
+    margin-left: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 30px;
   }
 }
@@ -330,6 +329,7 @@ body {
   .nav-contact__link {
     font-size: 14px;
     line-height: 1.14;
+    padding: 32px 0px;
   }
 }
 .nav-contact__link:hover, .nav-contact__link:focus {
@@ -561,9 +561,24 @@ body {
       flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .clients__item {
-  width: 210px;
+  min-width: 130px;
   height: 92px;
+}
+@media screen and (min-width: 480px) {
+  .clients__item {
+    width: 210px;
+  }
 }
 @media screen and (min-width: 768px) {
   .clients__item {
