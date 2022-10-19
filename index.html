@@ -21,20 +21,8 @@
     <header class="header">
       <div class="container nav">
         <nav class="nav">
-          <div class="menu">
           <a href="index.html" class="logo animate__animated animate__heartBeat"> <span class="logo__prepend">Web</span>Studio</a>
-          <button type="button" class="menu-toggle js-open-menu" 
-           aria-expanded="false"
-            aria-label="Перемикач мобільного меню"
-            aria-controls="mobile-menu">
-            
-            <svg class="menu-toggle__icon" width="40" height="40" 
-           >
-              <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-          </div>
-        </div>
+          
           <ul class="nav-site list">
             <li class="nav-site__item"><a href="./index.html" class="nav-site__link nav-site__link--current">Студія</a></li>
             <li class="nav-site__item"><a href="./portfolio.html" class="nav-site__link">Портфоліо</a></li>
@@ -59,6 +47,14 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-toggle js-open-menu" 
+           aria-expanded="false"
+            aria-controls="mobile-menu">
+            <svg class="menu-toggle__icon" width="40" height="40" 
+           >
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
       </div>
     </header>
     <main>
@@ -134,6 +130,7 @@
                         ./images/desktop/img1-2x.jpg 2x"
                 alt="працює за комп'ютером"
                 width="370"
+                src="./images/desktop/img1.jpg"
                 
               />
               <div class="services__overlay"><p class="list__title">Декстопні додатки</p></div>
@@ -145,7 +142,8 @@
                 ./images/desktop/img2-2x.jpg 2x"
                 alt="комп'ютер і телефон"
                 width="370"
-              
+                src="./images/desktop/img2.jpg"
+
               />
               <div class="services__overlay">
                 <p class="list__title">мобільні додатки</p>
@@ -158,7 +156,7 @@
                 ./images/desktop/img3-2x.jpg 2x"
                 alt="працює за планшетом"
                 width="370"
-                height="294"
+                src="./images/desktop/img3.jpg"
               />
               <div class="services__overlay">
                 <p class="list__title">Дизайнерські рішення</p>
@@ -534,12 +532,12 @@
     <!-- mobile-menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button type="button" class="menu-toggle js-close-menu">
-        <svg class="menu-toggle__icon" aria-label="Перемикач мобільного меню">
-          <use class="menu-toggle__close" href="./images/icons.svg#mob-close"></use>
+        <svg class="menu-toggle__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="menu-toggle__close" href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
       <div class="menu-container__wrap">
-        <ul class="mob-menu">
+        <ul class="mob-menu list">
           <li class="mob-menu__item">
             <a href="./index.html" class="mob-menu__link mob-menu__link--current">Студія</a>
           </li>
@@ -548,15 +546,15 @@
           </li>
           <li class="mob-menu__item"><a href="#" class="mob-menu__link">Контакти</a></li>
         </ul>
-        <ul class="mob-contact">
-          <li class="mob-contact__item">
-            <a href="mailto:info@devstudio.com" class="mob-contact__link">info@devstudio.com</a>
-          </li>
+        <ul class="mob-contact list">
           <li class="mob-contact__item">
             <a href="tel:+380961111111" class="mob-contact__link">+38 096 111 11 11</a>
           </li>
+          <li class="mob-mail__item">
+            <a href="mailto:info@devstudio.com" class="mob-mail__link">info@devstudio.com</a>
+          </li>
         </ul>
-        <ul class="mob-socials">
+        <ul class="mob-socials list">
           <li class="mob-socials__item">
             <a href="#" class="mob-socials__link">instagram</a>
           </li>
