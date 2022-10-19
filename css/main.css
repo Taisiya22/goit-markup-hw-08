@@ -947,8 +947,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: 609px;
+  height: auto;
   background-color: var(--white-text-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -962,10 +961,19 @@ body {
   transition: transform var(--timing-cubic-bezier), opacity var(--timing-cubic-bezier);
   transition: transform var(--timing-cubic-bezier), opacity var(--timing-cubic-bezier), -webkit-transform var(--timing-cubic-bezier);
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
   }
 }
 .modal__button {
