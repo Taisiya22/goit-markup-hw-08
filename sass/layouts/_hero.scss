@@ -1,12 +1,7 @@
 .hero {
     padding: 118px 0;
     text-align: center;
-
-   
-    
     background-color: var(--overlay-background-color);
-   
-
     &__overlay {
         max-width: 1600px;
         height: auto;
@@ -25,8 +20,6 @@
                         url(../images/header-mob-2x.jpg);
             }
 
-        
-
         @media screen and (min-width: 768px) {
             background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
                     url(../images/header-tab-1x.jpg);
@@ -38,6 +31,7 @@
                         }
         }
                  @media screen and (min-width: 1200px) {
+                    padding: 200px 0;
                     background-image: linear-gradient(to right, var(--linear-gradient-color), var(--linear-gradient-color)),
                             url(../images/hero.jpg);
                             @media (min-device-pixel-ratio: 2),
@@ -48,7 +42,7 @@
                                 }
 
                             
-                 }
+                 }  
     }
 
     &__title {

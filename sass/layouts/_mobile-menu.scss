@@ -25,7 +25,9 @@
 }
 
 .menu-container__wrap {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
 }
@@ -97,19 +99,17 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom: 306px;
 }
 
-.mob-contact__item {
-    margin-bottom: 32px;
-}
-
-.mob-mail__item {
-    margin-bottom: 64px;
+.mob-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .mob-socials {
     display: flex;
+    flex-wrap: wrap;
 }
 
 

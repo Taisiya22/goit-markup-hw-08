@@ -17,9 +17,13 @@
     }
 
     &__logo {
+        text-align: center;
         margin-bottom: 20px;
         color: var(--white-text-color);
         padding: 0;
+        @media screen and (min-width: 1200px) {
+                text-align: start;
+            }
 
     }
 
